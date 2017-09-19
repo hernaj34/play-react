@@ -227,12 +227,27 @@ $ yarn add less less-loader --dev
 +      {
 +        loader: require.resolve('less-loader'),
 +        options: {
-+          modifyVars: { "@primary-color": "#1DA57A" },
++          modifyVars: require('../theme.js').modifyVars
 +        },
 +      },
 +    ],
 +  },
 ],
+```
+
+Add theme.js at root
+```diff
++ module.exports = {
++   modifyVars: {
++     "@primary-color": "#0066CC",
++     "@font-family" :"'Roboto', sans-serif;",
++     "@body-background": "#ececec",
++     "@layout-header-background": "#0066CC",
++     "@layout-sider-background": "#404040",
++     "@menu-dark-bg": "#404040",
++     "@font-size-base": "14px"
++   }
++ }
 ```
 
 We use `modifyVars` option of [less-loader](https://github.com/webpack/less-loader#less-options) here, you can see a green button rendered on the page after reboot start server.
