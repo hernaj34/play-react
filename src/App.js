@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-import { Button } from 'antd';
 import './App.css';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import todoApp from './components/Todos/reducer';
+import Todos from './components/Todos/Todos';
+
+let store = createStore(
+  todoApp,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-          <Button type="primary">Botón</Button>
-      </div>
+      <Provider store={store}> 
+          <Todos/>
+      </Provider>
     );
   }
 }
