@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Page } from 'react-pdf';
-import { Document, Outline } from 'react-pdf/build/entry.webpack';
+import { Document } from 'react-pdf/build/entry.webpack';
 import file from './example.pdf';
  
 class PdfViewer extends Component {
@@ -38,8 +38,9 @@ class PdfViewer extends Component {
         <button onClick={() => this.handleRotate(90)} >Rotate</button>
         <Document
           file={file}
+          rotate={this.state.rotate}
           onLoadSuccess={this.onDocumentLoad}>
-          <Page pageNumber={2} rotate={90}/>
+          <Page pageNumber={this.state.pageNumber}/>
         </Document>
         <p>Page {pageNumber} of {numPages}</p>
       </div>
