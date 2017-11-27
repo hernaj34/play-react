@@ -3,7 +3,7 @@ import './App.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import todoApp from './components/Todos/reducer';
-import Todos from './components/Todos/Todos';
+import Test from './components/Test/Test';
 
 let store = createStore(
   todoApp,
@@ -14,10 +14,11 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}> 
-          <Todos/>
+          <Test />
       </Provider>
     );
   }
 }
 
 export default App;
+

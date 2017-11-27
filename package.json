@@ -2,9 +2,11 @@
   "name": "play-react",
   "version": "0.1.0",
   "private": true,
+  "typings": "./typings/index.d.ts",
   "dependencies": {
     "antd": "^2.13.2",
     "autoprefixer": "7.1.2",
+    "axios": "^0.17.0",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
@@ -26,15 +28,20 @@
     "file-loader": "0.11.2",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
+    "immutable": "^3.8.2",
     "jest": "20.0.4",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6",
     "promise": "8.0.1",
     "react": "^15.6.1",
+    "react-burger-menu": "^2.1.6",
     "react-dev-utils": "^4.0.1",
     "react-dom": "^15.6.1",
+    "react-pdf": "^2.2.0",
+    "react-pdf-js": "^3.0.0",
     "react-redux": "^5.0.6",
+    "react-transition-group": "^2.2.1",
     "redux": "^3.7.2",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
@@ -52,7 +59,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "t": "node scripts/testImmutable.js"
   },
   "jest": {
     "collectCoverageFrom": [
