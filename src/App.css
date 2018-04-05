@@ -22,5 +22,16 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.react-fine-uploader-file-progress-bar-container{
+  width: 100%;
+  height: 100%;
+}
+.react-fine-uploader-file-progress-bar {
+  background-color: blue;
+  height: 100%;
+}
 
 
+.test{
+  fill: grey;
+}

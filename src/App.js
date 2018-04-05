@@ -3,7 +3,7 @@ import './App.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import todoApp from './components/Todos/reducer';
-import Test from './components/Test/Test';
+import FileUploader from './components/Files/FileUploader';
 
 let store = createStore(
   todoApp,
@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}> 
-          <Test />
+          <FileUploader />
       </Provider>
     );
   }
